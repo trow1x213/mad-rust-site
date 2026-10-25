@@ -176,7 +176,7 @@
   });
 
   /* ---------- download feedback ---------- */
-  $$('a[data-download][download]').forEach(link => {
+  $$('a[data-download]').forEach(link => {
     link.addEventListener('click', () => {
       toast('Загрузка лаунчера началась');
     });

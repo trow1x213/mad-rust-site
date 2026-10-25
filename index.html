@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MAD RUST. Rust-сервер с честными рейдами</title>
+<meta name="description" content="MAD RUST: хардкорный Rust-сервер проекта MAD PROJECT. Честные рейды, живые ивенты, вайп каждые две недели. Скачай лаунчер и начни выживать.">
+<meta name="theme-color" content="#101312">
+<meta property="og:title" content="MAD RUST. Rust-сервер с честными рейдами">
+<meta property="og:description" content="Честные рейды, живые ивенты и вайп каждые две недели. Проект MAD PROJECT.">
+<meta property="og:image" content="assets/misty-pine-forest.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 29 9.5v13L16 30 3 22.5v-13z' fill='%23101312' stroke='%23A32718' stroke-width='2'/%3E%3Cpath d='M10 21V12l6 5 6-5v9' fill='none' stroke='%23E8EBE6' stroke-width='2.4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<header class="site-head">
+  <a class="brand" href="#top" aria-label="MAD RUST — на главную">
+    <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+      <path d="M16 2 29 9.5v13L16 30 3 22.5v-13z" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M10 21V12l6 5 6-5v9" fill="none" stroke="currentColor" stroke-width="2.4"/>
+    </svg>
+    <span>MAD PROJECT</span>
+  </a>
+  <nav class="nav-links" aria-label="Основная навигация">
+    <a href="#about">О проекте</a>
+    <a href="#features">Возможности</a>
+    <a href="#start">Как начать</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <button class="menu-btn" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileMenu">Меню</button>
+</header>
+
+<div class="menu" id="mobileMenu" aria-hidden="true" hidden>
+  <button class="menu-close" id="menuClose" type="button" aria-label="Закрыть меню">Закрыть</button>
+  <nav class="menu-links" aria-label="Мобильная навигация">
+    <a href="#about">О проекте</a>
+    <a href="#features">Возможности</a>
+    <a href="#start">Как начать</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <a class="btn menu-download" href="#download" data-download>Скачать лаунчер</a>
+</div>
+
+<main>
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <figure class="hero-visual">
+    <img src="assets/misty-pine-forest.jpg" width="1920" height="1280" alt="Мёртвый лес в тумане" fetchpriority="high" decoding="async">
+  </figure>
+
+  <p class="hero-deck">Хардкорный Rust-сервер с честными рейдами и вайпом каждые две недели.</p>
+  <a class="btn hero-cta" href="#download" data-download>Скачать лаунчер</a>
+
+  <h1 class="monument">MAD RUST</h1>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="section intro" id="about" aria-labelledby="about-title">
+  <div class="wrap">
+    <div class="intro-top">
+      <div class="intro-title reveal">
+        <h2 id="about-title">Мир после вайпа</h2>
+        <p class="status"><span class="status-dot" aria-hidden="true"></span>Статус MAD RUST: сервер работает</p>
+      </div>
+      <div class="intro-note reveal">
+        <p>Здесь нет очередей, платных преимуществ и равнодушной администрации. Только ресурсы, рейды и люди, с которыми ты делишь карту.</p>
+        <p>MAD RUST — флагманский проект MAD PROJECT. Мы играем на своём сервере, читаем каждое обращение и обновляем контент каждые две недели.</p>
+      </div>
+    </div>
+
+    <div class="intro-bottom">
+      <div class="facts reveal">
+        <div class="fact fact-timer">
+          <b class="timer" aria-label="До следующего вайпа">
+            <span class="timer-part"><span data-cd="days">11</span><small>д</small></span>
+            <span class="timer-part"><span data-cd="hours">6</span><small>ч</small></span>
+            <span class="timer-part"><span data-cd="minutes">41</span><small>мин</small></span>
+          </b>
+          <span>до следующего вайпа</span>
+        </div>
+        <div class="fact">
+          <b data-bind="wipeShort">5 ноя</b>
+          <span><span data-bind="wipeFull">5 ноября · 18:00 МСК</span></span>
+        </div>
+        <div class="fact">
+          <b>15 МБ</b>
+          <span>лаунчер для Windows 10 и 11</span>
+        </div>
+        <div class="fact">
+          <b>0</b>
+          <span>предметов, которые можно купить за деньги</span>
+        </div>
+      </div>
+
+      <figure class="intro-photo reveal">
+        <img src="assets/campfire-and-sparks-in-anttoora-3.jpg" width="1920" height="1280" alt="Искры от костра в темноте" loading="lazy" decoding="async">
+        <figcaption>Искры над костром. Фото: kallerna, CC BY-SA 3.0.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FEATURES ================= -->
+<section class="section features" id="features" aria-labelledby="features-title">
+  <div class="wrap">
+    <div class="features-head reveal">
+      <h2 id="features-title">Что здесь иначе</h2>
+      <p>Три вещи, которые решают, останешься ты на второй вайп или уйдёшь искать другой сервер.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-col reveal">
+        <h3>Честная игра</h3>
+        <ul>
+          <li>Без pay-to-win</li>
+          <li>Каждый предмет добывается в игре</li>
+          <li>Донат только косметика</li>
+          <li>Ручная модерация</li>
+          <li>Античит и проверки</li>
+        </ul>
+        <p class="feature-desc">Баланс не продаётся. Всё, что влияет на рейд, добывается на карте.</p>
+      </div>
+
+      <div class="feature-col reveal">
+        <h3>Живой мир</h3>
+        <ul>
+          <li>Ивенты каждую неделю</li>
+          <li>Арены и гонки</li>
+          <li>Свои монументы</li>
+          <li>Живая экономика</li>
+          <li>Торговые хабы</li>
+        </ul>
+        <p class="feature-desc">Карта не стоит на месте: события, сделки и точки, за которые дерутся.</p>
+      </div>
+
+      <div class="feature-col reveal">
+        <h3>Стабильность</h3>
+        <ul>
+          <li>Сервер без фризов</li>
+          <li>Быстрые загрузки</li>
+          <li>Проверка файлов</li>
+          <li>Поддержка в Discord</li>
+          <li>Обновления каждые две недели</li>
+        </ul>
+        <p class="feature-desc">Лаунчер сам проверяет файлы, а сервер держит темп в разгар рейда.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WIPE ================= -->
+<section class="wipe" id="wipe" aria-labelledby="wipe-title">
+  <img src="assets/flooded-interior-of-abandoned-factory.jpg" width="1920" height="1442" alt="Затопленный цех заброшенного завода" loading="lazy" decoding="async">
+  <div class="wipe-panel reveal">
+    <h2 id="wipe-title">Всё обнуляется</h2>
+    <p>Каждые две недели карта возвращается в исходное состояние. Базы, склады и союзы исчезают. Остаются навыки и те, с кем ты начнёшь заново.</p>
+    <p class="wipe-date">Следующий вайп: <span data-bind="wipeFull">5 ноября · 18:00 МСК</span></p>
+    <p class="wipe-credit">Фото: saskialisette, CC BY-SA 4.0.</p>
+  </div>
+</section>
+
+<!-- ================= HOW IT WORKS ================= -->
+<section class="how" id="start" aria-labelledby="how-title">
+  <img class="how-bg" src="assets/taupe-heavily-rusted-stained-discolored-grungy-old.jpg" width="1846" height="1846" alt="" aria-hidden="true" loading="lazy" decoding="async">
+  <div class="wrap">
+    <div class="how-copy reveal">
+      <h2 id="how-title">От файла до рейда</h2>
+      <p>Лаунчер скачивает и проверяет файлы сам. Steam и лицензия Rust не нужны. Выбираешь папку, ждёшь проверку, нажимаешь «Играть».</p>
+    </div>
+
+    <div class="slip reveal" aria-label="Порядок установки">
+      <div class="slip-group">
+        <h3>Лаунчер</h3>
+        <p><span>Скачать с сайта</span><b>15 МБ</b></p>
+        <p><span>Запустить</span><b>без установки</b></p>
+      </div>
+      <div class="slip-group">
+        <h3>Установка</h3>
+        <p><span>Выбрать папку</span><b>1 клик</b></p>
+        <p><span>Скачать файлы</span><b>авто</b></p>
+        <p><span>Проверить целостность</span><b>авто</b></p>
+      </div>
+      <div class="slip-group">
+        <h3>Первый вход</h3>
+        <p><span>Нажать «Играть»</span><b>готово</b></p>
+      </div>
+      <p class="slip-total">Ты на сервере</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta" id="download" aria-labelledby="cta-title">
+  <h2 id="cta-title" class="reveal">Вайп начинается</h2>
+
+  <div class="cta-timer reveal">
+    <b aria-label="До следующего вайпа">
+      <span class="timer-part"><span data-cd="days">11</span><small>д</small></span>
+      <span class="timer-part"><span data-cd="hours">6</span><small>ч</small></span>
+      <span class="timer-part"><span data-cd="minutes">41</span><small>мин</small></span>
+    </b>
+    <p>до вайпа · <span data-bind="wipeFull">5 ноября · 18:00 МСК</span></p>
+  </div>
+
+  <div class="cta-bottom reveal">
+    <p>Скачай лаунчер, установи игру одной кнопкой. Дальше только выживание.</p>
+    <a class="btn btn-invert" href="MAD RUST.exe" download data-download>Скачать лаунчер</a>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="section faq" id="faq" aria-labelledby="faq-title">
+  <div class="wrap faq-grid">
+    <div class="faq-head reveal">
+      <h2 id="faq-title">Частые вопросы</h2>
+      <div class="faq-side reveal">
+        <p>Не нашёл ответ? В Discord отвечают быстрее всего.</p>
+        <a class="btn" data-social="discord" href="https://discord.gg/VuZD9yztrM" target="_blank" rel="noopener">Открыть Discord</a>
+      </div>
+    </div>
+
+    <div class="faq-list">
+      <details open>
+        <summary>Как начать играть на MAD RUST?</summary>
+        <p>Скачай лаунчер, выбери папку для игры и нажми «Установить». Лаунчер скачает актуальные файлы, проверит их и запустит игру. Steam и лицензия Rust не нужны.</p>
+      </details>
+      <details>
+        <summary>Нужны ли Steam и лицензия Rust?</summary>
+        <p>Нет. Лаунчер скачивает и проверяет файлы сам, поэтому отдельная установка Rust через Steam не требуется.</p>
+      </details>
+      <details>
+        <summary>Когда проходят вайпы?</summary>
+        <p>Каждые две недели, по четвергам в 18:00 МСК. Точный таймер до следующего вайпа висит на этой странице и в лаунчере.</p>
+      </details>
+      <details>
+        <summary>Есть ли донат и pay-to-win?</summary>
+        <p>Pay-to-win нет. Донат даёт косметику и небольшие удобства, которые не влияют на баланс и исход рейдов. Всё оружие и ресурсы добываются в игре.</p>
+      </details>
+      <details>
+        <summary>Что делать, если установка прервалась?</summary>
+        <p>Открой лаунчер, нажми «Проверить файлы», а затем «Установить». Повреждённые и отсутствующие файлы докачаются автоматически. Заново качать всю игру не придётся.</p>
+      </details>
+      <details>
+        <summary>Меня заблокировали, куда писать?</summary>
+        <p>В Discord в канал поддержки. Приложи ник, время и, если есть, запись экрана. Админы разберут обращение вручную.</p>
+      </details>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-invite reveal">
+      <h2>Заходи на сервер</h2>
+      <a class="btn" href="MAD RUST.exe" download data-download>Скачать лаунчер</a>
+    </div>
+
+    <nav class="footer-links reveal" aria-label="Ссылки">
+      <a data-social="discord" href="https://discord.gg/VuZD9yztrM" target="_blank" rel="noopener">Discord</a>
+      <a data-social="store" href="https://madrustt.gamestores.app/" target="_blank" rel="noopener">Магазин</a>
+      <span class="soon" aria-disabled="true">Telegram, скоро</span>
+      <span class="soon" aria-disabled="true">VK, скоро</span>
+    </nav>
+  </div>
+
+  <div class="footer-meta reveal">
+    <p class="footer-credits">
+      Фото:
+      <a href="https://commons.wikimedia.org/w/index.php?curid=90733658" target="_blank" rel="noopener">Heri nugroho</a>,
+      <a href="https://commons.wikimedia.org/wiki/File:Campfire_and_sparks_in_Anttoora_3.jpg" target="_blank" rel="noopener">kallerna</a>,
+      <a href="https://commons.wikimedia.org/w/index.php?curid=198026242" target="_blank" rel="noopener">saskialisette</a>,
+      <a href="https://commons.wikimedia.org/wiki/File:Taupe_heavily_rusted_stained_discolored_grungy_old_leaking_seamless_metal_steel_texture.jpg" target="_blank" rel="noopener">Sisters.seamless</a>.
+      Лицензии CC BY-SA 4.0, CC BY-SA 3.0, CC0.
+    </p>
+    <p class="footer-legal">© <span id="year">2026</span> MAD PROJECT. MAD RUST не связан с Facepunch Studios.</p>
+  </div>
+
+  <p class="footer-word" aria-hidden="true">MAD RUST</p>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite">Загрузка лаунчера началась</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>

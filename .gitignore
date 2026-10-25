@@ -1,0 +1,8 @@
+# Лаунчер выкладывается через GitHub Releases, а не в репозиторий
+*.exe
+!assets/**/*.exe
+
+# Служебный мусор
+.DS_Store
+Thumbs.db
+desktop.ini
